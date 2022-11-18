@@ -15,7 +15,25 @@ namespace double_linked_list
         //point to the preceding node
         public Node prev;
     }
+    class DoubleLinkedList
+    {
+        Node START;
 
+        //constructor
+
+        public void addNode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\n Enter the roll number of the stuent :");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Enter the name of student: ");
+            nm =  Console.ReadLine();
+            Node newNode = new Node();
+            newNode.noMhs = nim;
+            newNode.name = nm;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
