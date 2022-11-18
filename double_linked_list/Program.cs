@@ -122,6 +122,16 @@ namespace double_linked_list
             else
                 return false;
         }
+        public void ascending()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecord in the ascending order of" + "Roll number are:\n");
+                Node currentNode;
+            }
+        }
     }
     class Program
     {
