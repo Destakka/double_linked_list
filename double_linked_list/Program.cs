@@ -90,6 +90,31 @@ namespace double_linked_list
             return ( current != null );
 
         }
+        public bool delNode (int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            // the begining of data
+            if (current.next == null)
+            {
+                previous.next = null;
+                return true;
+            }
+            //Node between two nodes in the list
+            if (current == START)
+            {
+                START = START.next;
+                if (START != null)
+                    START.next.prev = null;
+                return true;
+            }
+            //*If the to be delated is in the between the list the the following lines of is exetuted.*/
+            previous.next = current.next;
+            current.next.prev = previous;
+            return true;
+        }
     }
     class Program
     {
